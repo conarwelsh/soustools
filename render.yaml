@@ -2,7 +2,7 @@ services:
   - type: web
     name: sous-api
     env: node
-    buildCommand: pnpm install && pnpm turbo run build --filter=api
+    buildCommand: pnpm install && npx turbo run build --filter=api
     startCommand: cd apps/api && pnpm run start:prod
     envVars:
       - key: NODE_VERSION
